@@ -3,5 +3,7 @@
 [node name="PaddleLeft" type="CharacterBody2D" unique_id=1770174506]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=474678334]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 14.0
+offset_top = 6.0
+offset_right = 54.0
+offset_bottom = 46.0

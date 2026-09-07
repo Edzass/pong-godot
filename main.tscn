@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="1_ig7tw"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mkk7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk3te"]
+
 [node name="Main" type="Node2D" unique_id=17236457]
 
 [node name="Speles" type="Node2D" parent="." unique_id=1786536958]
@@ -13,10 +17,16 @@ modulate = Color(0, 1, 1, 1)
 self_modulate = Color(0.2555465, 1, 0.9304947, 1)
 position = Vector2(143, 426)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Speles/PaddleRight" unique_id=1782201608]
+shape = SubResource("RectangleShape2D_5mkk7")
+
 [node name="PaddleLeft" parent="Speles" unique_id=1770174506 instance=ExtResource("1_ig7tw")]
 modulate = Color(0.30420235, 0.9999997, 0.8993744, 1)
 self_modulate = Color(0.30894393, 0.9999997, 0.89591557, 1)
 position = Vector2(167, 210)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Speles/PaddleLeft" unique_id=812237961]
+shape = SubResource("RectangleShape2D_uk3te")
 
 [node name="UI" type="Node2D" parent="." unique_id=879954851]
 
