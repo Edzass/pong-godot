@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b821myv7hqira"]
+
+[ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=17236457]
+
+[node name="Speles" type="Node2D" parent="." unique_id=1786536958]
+
+[node name="Bumba" type="Sprite2D" parent="Speles" unique_id=787407087]
+
+[node name="PaddleRight" parent="Speles" unique_id=2109439184 instance=ExtResource("1_ig7tw")]
+modulate = Color(0, 1, 1, 1)
+self_modulate = Color(0.2555465, 1, 0.9304947, 1)
+position = Vector2(143, 426)
+
+[node name="PaddleLeft" parent="Speles" unique_id=1770174506 instance=ExtResource("1_ig7tw")]
+modulate = Color(0.30420235, 0.9999997, 0.8993744, 1)
+self_modulate = Color(0.30894393, 0.9999997, 0.89591557, 1)
+position = Vector2(167, 210)
+
+[node name="UI" type="Node2D" parent="." unique_id=879954851]
+
+[node name="Punkti" type="Label" parent="UI" unique_id=1573243350]
+offset_left = 17.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 27.0

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d4j7xe1qi3tfu"]
+
+[node name="PaddleLeft" type="CharacterBody2D" unique_id=1770174506]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=474678334]
+offset_right = 40.0
+offset_bottom = 40.0
