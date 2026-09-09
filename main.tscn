@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b821myv7hqira"]
 
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cvyqqc3mo87ka" path="res://Hello.cs" id="2_0xm2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mkk7"]
 
@@ -35,3 +36,6 @@ offset_left = 17.0
 offset_top = 4.0
 offset_right = 42.0
 offset_bottom = 27.0
+
+[node name="Hello" type="Node" parent="." unique_id=151519011]
+script = ExtResource("2_0xm2m")

@@ -14,3 +14,5 @@ Node 2D ir objekta iesatījums pozīcijai, rotācijai un mēroga attēlošanai 2
 
 
 Scena ir kā mezglu apkopojums, mezgli padara aritektūrtu vieglāk pārredzamu un uztveramu.
+
+dotnet versija --10.0.401
