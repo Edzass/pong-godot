@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://d4j7xe1qi3tfu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ut3sq"]
+
 [node name="PaddleLeft" type="CharacterBody2D" unique_id=1770174506]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=474678334]
-offset_left = 14.0
-offset_top = 6.0
-offset_right = 54.0
-offset_bottom = 46.0
+offset_left = 69.0
+offset_top = 10.0
+offset_right = 109.0
+offset_bottom = 50.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=221931949]
+position = Vector2(66, -2)
+shape = SubResource("RectangleShape2D_ut3sq")
