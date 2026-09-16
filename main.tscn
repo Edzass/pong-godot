@@ -3,30 +3,70 @@
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cvyqqc3mo87ka" path="res://Hello.cs" id="2_0xm2m"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk3te"]
+size = Vector2(12.810375, 1.2814999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mkk7"]
+size = Vector2(1283, 122.5)
+
 [node name="Main" type="Node2D" unique_id=17236457]
 
 [node name="Speles" type="Node2D" parent="." unique_id=1786536958]
 
 [node name="Bumba" type="Sprite2D" parent="Speles" unique_id=787407087]
+position = Vector2(640, 360)
 
 [node name="PaddleRight" parent="Speles" unique_id=2109439184 instance=ExtResource("1_ig7tw")]
 modulate = Color(0, 1, 1, 1)
 self_modulate = Color(0.2555465, 1, 0.9304947, 1)
-position = Vector2(2, 3)
+position = Vector2(1113, 360)
 
 [node name="PaddleLeft" parent="Speles" unique_id=1770174506 instance=ExtResource("1_ig7tw")]
 modulate = Color(0.30420235, 0.9999997, 0.8993744, 1)
 self_modulate = Color(0.30894393, 0.9999997, 0.89591557, 1)
-position = Vector2(87, 4)
+position = Vector2(60, 360)
 
 [node name="UI" type="Node2D" parent="." unique_id=879954851]
 position = Vector2(17, -21)
 
 [node name="Punkti" type="Label" parent="UI" unique_id=1573243350]
-offset_left = 33.0
-offset_top = -17.0
-offset_right = 58.0
-offset_bottom = 6.0
+modulate = Color(1, 0, 0, 1)
+z_index = 1
+offset_left = 554.0
+offset_top = 43.0
+offset_right = 687.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 69
+text = "0 : 0"
+
+[node name="VidusLinija" type="Line2D" parent="UI" unique_id=2006119041]
+position = Vector2(622.5, 655)
+points = PackedVector2Array(0, -600, 0, 0)
+
+[node name="SienaAugsa" type="StaticBody2D" parent="UI" unique_id=2002805195]
+scale = Vector2(100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/SienaAugsa" unique_id=672372304]
+position = Vector2(6.244812, 0.73925)
+shape = SubResource("RectangleShape2D_uk3te")
+
+[node name="ColorRect" type="ColorRect" parent="UI/SienaAugsa" unique_id=1418563505]
+offset_left = -0.85999995
+offset_top = -0.66999996
+offset_right = 13.559999
+offset_bottom = 1.7299999
+
+[node name="SienaApaksa" type="StaticBody2D" parent="UI" unique_id=1685136958]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/SienaApaksa" unique_id=220676643]
+position = Vector2(622.5, 675.25)
+shape = SubResource("RectangleShape2D_5mkk7")
+
+[node name="ColorRect" type="ColorRect" parent="UI/SienaApaksa" unique_id=378688562]
+offset_left = -17.0
+offset_top = 610.0
+offset_right = 1263.0
+offset_bottom = 738.0
 
 [node name="Hello" type="Node" parent="." unique_id=151519011]
 script = ExtResource("2_0xm2m")
