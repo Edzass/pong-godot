@@ -33,3 +33,5 @@ C# ir jāpievieno semikols komandas beigās.
 Nomainot paddle objekta Y vērtību uz "0", tā atrašanās vieta izmainās - tuvāk ekrāna augšējai malai.
 
 Logā 1920x1080 centra pozīcija ir (960, 540), tomēr tas ir pie nosacījuma, ja visas x un y vērtībās ir pozitīvas. Manā gadījumā Godot vidē daļa no vērtībām ir negatīvas, jo noklusējuma kamera tā ir iestatīta.
+
+Ātrums jāreizina ar `delta`, jo `delta` ir laiks starp diviem kadriem. Tādēļ bumba katrā kadrā pārvietojas par ātrumu reiz laiku, un tās kustība nav atkarīga no kadru skaita sekundē (FPS).
