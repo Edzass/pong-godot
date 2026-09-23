@@ -5,7 +5,7 @@ public partial class Ball : CharacterBody2D
 	private Vector2 velocity;
 	private bool isStopped;
 
-	[Export] public float BaseSpeed = 420.0f;
+	[Export] public float BaseSpeed = 250.0f;
 	[Export] public float Radius = 12.0f;
 	public Game GameRef { get; set; }
 
@@ -46,7 +46,26 @@ public partial class Ball : CharacterBody2D
 
 		if (collision != null)
 		{
-			velocity = velocity.Bounce(collision.GetNormal());
+			Vector2 normal = collision.GetNormal();
+			Paddle paddle = collision.GetCollider() as Paddle;
+
+			if (paddle != null)
+			{
+				float direction = GlobalPosition.X < paddle.GlobalPosition.X ? -1.0f : 1.0f;
+				velocity = new Vector2(direction, velocity.Y / BaseSpeed).Normalized() * BaseSpeed;
+				GlobalPosition = new Vector2(
+					paddle.GlobalPosition.X + direction * (Radius + 11.0f),
+					GlobalPosition.Y);
+			}
+			else
+			{
+				if (velocity.Dot(normal) < 0.0f)
+				{
+					velocity = velocity.Bounce(normal);
+				}
+
+				GlobalPosition += normal * 0.5f;
+			}
 		}
 
 		Vector2 viewportSize = GetViewportRect().Size;
